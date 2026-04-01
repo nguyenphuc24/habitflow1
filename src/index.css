@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root {
+    height: 100%;
+    overflow: hidden;
+    background: #0a0a0f;
+    font-family: 'Outfit', sans-serif;
+    color: #f4f4ff;
+    -webkit-tap-highlight-color: transparent;
+  }
+  * { box-sizing: border-box; }
+  input, button { font-family: inherit; }
+  ::-webkit-scrollbar { display: none; }
+
+}
+
+@layer utilities {
+  .safe-top    { padding-top: env(safe-area-inset-top, 0px); }
+  .safe-bottom { padding-bottom: env(safe-area-inset-bottom, 0px); }
+  .h-dvh { height: 100dvh; }
+  .max-mobile { max-width: 430px; margin: 0 auto; }
+  .gradient-text {
+    background: linear-gradient(135deg, #fff 30%, #c084fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .gradient-acc {
+    background: linear-gradient(135deg, #7c5cfc, #c084fc);
+  }
+  .card-glow {
+    box-shadow: 0 4px 24px rgba(124, 92, 252, 0.15);
+  }
+  .press { transition: transform .15s; }
+  .press:active { transform: scale(0.94); }
+}
